@@ -1,0 +1,17 @@
+__pycache__/
+*.py[cod]
+.venv/
+data/
+demo-data/
+build/
+dist/
+*.spec
+*.log
+*.har
+*.saz
+*.exe
+*.zip
+*.tmp
+~$*
+.env*
+gurobi.lic

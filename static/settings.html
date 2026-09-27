@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>设置 · 北信科完全学分制自动排课</title><link rel="stylesheet" href="/styles.css"><script src="/settings.js" defer></script></head>
+<body>
+  <header class="topbar">
+    <div class="brand"><span>设置</span><h1>排课系统</h1></div>
+    <nav aria-label="主导航"><a href="/">课表</a><a href="/courses.html">课程调整</a><a href="/#preferences">排课偏好</a><a href="/settings.html" aria-current="page">设置</a></nav>
+  </header>
+  <main class="page-shell settings-shell">
+    <section class="control-panel">
+      <div class="panel-heading"><h2>课程账号</h2><span id="backend" class="course-code"></span></div>
+      <form id="account-form" class="settings-form">
+        <label>账号<input id="username" name="username" autocomplete="username" required></label>
+        <label>密码<input id="password" name="password" type="password" autocomplete="current-password"></label>
+        <label>课程批次<select id="batch"><option value="">自动选择当前批次</option></select></label>
+        <div class="settings-actions"><button class="button primary-button" id="fetch-courses" type="submit">获取所有课程安排</button><a class="button" href="/">查看课表</a></div>
+        <div id="fetch-status" role="status"></div>
+      </form>
+    </section>
+  </main>
+</body>
+</html>

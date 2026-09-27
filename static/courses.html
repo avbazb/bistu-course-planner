@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>课程调整 · 北信科完全学分制自动排课</title>
+  <link rel="stylesheet" href="/styles.css" />
+  <script src="/timetable.js" defer></script>
+  <script src="/app.js" defer></script>
+</head>
+<body data-page="courses">
+  <header class="topbar">
+    <div class="brand"><span><span id="term-label">课程安排</span></span><h1>排课系统</h1></div>
+    <nav aria-label="主导航"><a href="/">课表</a><a href="/courses.html" aria-current="page">课程调整</a><a href="/#preferences">排课偏好</a><a href="/settings.html">设置</a></nav>
+    <div class="top-actions"><span id="solver-status" role="status">加载中</span><button id="solve-button" class="button" disabled>重新计算</button></div>
+  </header>
+  <main class="page-shell editor-shell">
+    <section class="course-panel" aria-label="课程调整">
+      <div class="section-heading"><h2>全部课程 <span id="course-count" class="count"></span></h2><input id="course-search" type="search" placeholder="搜索课程" aria-label="搜索课程" disabled /></div>
+      <div id="course-list" class="course-list"></div>
+    </section>
+  </main>
+  <div id="toast" class="toast" role="alert" hidden></div>
+</body>
+</html>

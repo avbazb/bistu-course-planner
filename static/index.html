@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>课表 · 北信科完全学分制自动排课</title>
+  <link rel="stylesheet" href="/styles.css" />
+  <script src="/timetable.js" defer></script>
+  <script src="/export.js" defer></script>
+  <script src="/app.js" defer></script>
+</head>
+<body data-page="timetable">
+  <header class="topbar">
+    <div class="brand"><span><span id="term-label">课程安排</span></span><h1>排课系统</h1></div>
+    <nav aria-label="主导航"><a href="/" aria-current="page">课表</a><a href="/courses.html">课程调整</a><a href="/#preferences">排课偏好</a><a href="/settings.html">设置</a></nav>
+    <div class="top-actions"><span id="solver-status" role="status">加载中</span><button id="solve-button" class="button" disabled>重新计算</button></div>
+  </header>
+  <main class="page-shell">
+    <section class="free-days-panel" aria-labelledby="free-days-title">
+      <div class="panel-heading"><h2 id="free-days-title">理论课全天无课</h2><span id="free-days-range" class="course-code"></span></div>
+      <dl class="free-days-list">
+        <div><dt>工作日 <strong id="free-weekday-count">—</strong></dt><dd id="free-weekdays">加载中</dd></div>
+        <div><dt>周末 <strong id="free-weekend-count">—</strong></dt><dd id="free-weekends">加载中</dd></div>
+      </dl>
+    </section>
+    <section class="control-panel compact-controls" id="preferences" aria-label="排课偏好">
+      <div class="panel-heading"><h2>排课偏好</h2><label class="switch-control"><input id="self-study-toggle" type="checkbox" disabled /><span>允许自主学习 <strong id="self-study-count">0/2</strong></span></label></div>
+      <fieldset id="weight-controls" disabled>
+        <div class="weight-grid">
+          <label class="weight-item"><span><b>一天没课指数</b><output id="freeDays-value">0</output></span><input id="freeDays" type="range" min="0" max="10" step="1" value="0" /></label>
+          <label class="weight-item"><span><b>避开早八</b><output id="early8-value">5</output></span><input id="early8" type="range" min="0" max="10" step="1" value="5" /></label>
+          <label class="weight-item"><span><b>避开下午第一节</b><output id="afternoonFirst-value">0</output></span><input id="afternoonFirst" type="range" min="0" max="10" step="1" value="0" /></label>
+          <label class="weight-item"><span><b>避开周一上午</b><output id="mondayMorning-value">3</output></span><input id="mondayMorning" type="range" min="0" max="10" step="1" value="3" /></label>
+          <label class="weight-item"><span><b>避开周五上午</b><output id="fridayMorning-value">0</output></span><input id="fridayMorning" type="range" min="0" max="10" step="1" value="0" /></label>
+          <label class="weight-item"><span><b>避开周五下午</b><output id="fridayAfternoon-value">2</output></span><input id="fridayAfternoon" type="range" min="0" max="10" step="1" value="2" /></label>
+          <label class="weight-item"><span><b>避开周五晚上</b><output id="fridayEvening-value">2</output></span><input id="fridayEvening" type="range" min="0" max="10" step="1" value="2" /></label>
+        </div>
+      </fieldset>
+    </section>
+    <div class="schedule-layout" id="schedule-layout">
+    <section class="calendar-panel" aria-label="课表">
+      <div class="section-heading">
+        <div class="calendar-heading"><h2 id="calendar-title">学期课表</h2><div class="export-actions"><button id="export-xlsx" class="button" disabled>导出 Excel</button><button id="export-png" class="button" disabled>高清图片</button></div></div>
+        <div class="week-controls"><button id="previous-week" class="button button-secondary" aria-label="上一周" disabled>上一周</button><select id="week-select" aria-label="显示周数" disabled><option value="0">学期总览</option></select><button id="next-week" class="button button-secondary" aria-label="下一周" disabled>下一周</button></div>
+      </div>
+      <div class="timetable-wrap" tabindex="0" aria-label="课表滚动区域"><div id="timetable" class="timetable" aria-label="周一至周日，第一至第十四节"></div></div>
+      <div id="week-empty" class="empty-list" hidden>本周没有已排课程</div>
+    </section>
+    <aside id="course-alternatives" class="alternatives-panel" aria-labelledby="alternatives-title" hidden>
+      <div class="alternatives-heading"><div><h2 id="alternatives-title"></h2><span id="alternatives-meta" class="course-code"></span></div><button id="close-alternatives" class="button" aria-label="关闭班次选择">关闭</button></div>
+      <div class="alternatives-controls"><input id="alternative-search" type="search" placeholder="搜索老师、教室" aria-label="搜索老师或班次" /><div class="alternatives-actions"><button id="alternative-auto" class="button">恢复自动</button><button id="alternative-self-study" class="button">自主学习</button><a id="alternative-course-link" href="/courses.html">课程详情</a></div></div>
+      <div id="alternative-options" class="alternative-options"></div>
+    </aside>
+    </div>
+    <section id="off-grid" class="off-grid" aria-label="自主学习与未排课程" hidden></section>
+  </main>
+  <div id="toast" class="toast" role="alert" hidden></div>
+</body>
+</html>

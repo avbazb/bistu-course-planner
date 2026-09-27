@@ -1,0 +1,243 @@
+{
+  "schema_version": 1,
+  "term": "演示学期",
+  "courses": [
+    {
+      "id": "DEMO101",
+      "code": "DEMO101",
+      "name": "演示课程一",
+      "credits": 2,
+      "hours": 28,
+      "options": [
+        {
+          "id": "DEMO101-01",
+          "teaching_class_id": "DEMO10101",
+          "class_number": "01",
+          "teacher": "演示教师1",
+          "room": "演示教室",
+          "capacity": 60,
+          "events": [
+            {
+              "day": 0,
+              "start": 1,
+              "end": 2,
+              "weeks": [
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16
+              ],
+              "weeks_text": "3-16周",
+              "parity": "all",
+              "teacher": "演示教师1",
+              "room": "演示教室"
+            }
+          ]
+        },
+        {
+          "id": "DEMO101-02",
+          "teaching_class_id": "DEMO10102",
+          "class_number": "02",
+          "teacher": "演示教师2",
+          "room": "演示教室",
+          "capacity": 60,
+          "events": [
+            {
+              "day": 1,
+              "start": 6,
+              "end": 7,
+              "weeks": [
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16
+              ],
+              "weeks_text": "3-16周",
+              "parity": "all",
+              "teacher": "演示教师2",
+              "room": "演示教室"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "DEMO102",
+      "code": "DEMO102",
+      "name": "演示课程二",
+      "credits": 2,
+      "hours": 28,
+      "options": [
+        {
+          "id": "DEMO102-01",
+          "teaching_class_id": "DEMO10201",
+          "class_number": "01",
+          "teacher": "演示教师1",
+          "room": "演示教室",
+          "capacity": 60,
+          "events": [
+            {
+              "day": 0,
+              "start": 1,
+              "end": 2,
+              "weeks": [
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16
+              ],
+              "weeks_text": "3-16周",
+              "parity": "all",
+              "teacher": "演示教师1",
+              "room": "演示教室"
+            }
+          ]
+        },
+        {
+          "id": "DEMO102-02",
+          "teaching_class_id": "DEMO10202",
+          "class_number": "02",
+          "teacher": "演示教师2",
+          "room": "演示教室",
+          "capacity": 60,
+          "events": [
+            {
+              "day": 0,
+              "start": 3,
+              "end": 4,
+              "weeks": [
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16
+              ],
+              "weeks_text": "3-16周",
+              "parity": "all",
+              "teacher": "演示教师2",
+              "room": "演示教室"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "DEMO103",
+      "code": "DEMO103",
+      "name": "演示课程三",
+      "credits": 2,
+      "hours": 28,
+      "options": [
+        {
+          "id": "DEMO103-01",
+          "teaching_class_id": "DEMO10301",
+          "class_number": "01",
+          "teacher": "演示教师1",
+          "room": "演示教室",
+          "capacity": 60,
+          "events": [
+            {
+              "day": 4,
+              "start": 11,
+              "end": 12,
+              "weeks": [
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16
+              ],
+              "weeks_text": "3-16周",
+              "parity": "all",
+              "teacher": "演示教师1",
+              "room": "演示教室"
+            }
+          ]
+        },
+        {
+          "id": "DEMO103-02",
+          "teaching_class_id": "DEMO10302",
+          "class_number": "02",
+          "teacher": "演示教师2",
+          "room": "演示教室",
+          "capacity": 60,
+          "events": [
+            {
+              "day": 2,
+              "start": 8,
+              "end": 9,
+              "weeks": [
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16
+              ],
+              "weeks_text": "3-16周",
+              "parity": "all",
+              "teacher": "演示教师2",
+              "room": "演示教室"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

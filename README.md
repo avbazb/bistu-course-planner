@@ -153,6 +153,6 @@ Python 测试需要无 Gurobi 版的依赖：
 node --test tests/layout.test.cjs
 ```
 
-测试使用虚构账号和离线响应，不访问学校系统。默认执行 OR-Tools 用例；检测到 `gurobi_cl` 后也会执行 Gurobi 对照用例，此时需要有效许可。本项目不附带真实账号、个人课程数据或网络抓包。
+测试使用虚构账号和离线响应，不访问学校系统。默认执行 OR-Tools 用例；检测到 `gurobi_cl` 后也会执行 Gurobi 对照用例，此时需要有效许可。
 
 求解器说明：[OR-Tools CP-SAT](https://developers.google.com/optimization/cp/cp_solver)、[求解时间限制](https://developers.google.com/optimization/cp/cp_tasks)。
